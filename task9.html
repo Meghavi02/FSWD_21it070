@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function simulateAsyncOperation(callback) {
+            setTimeout(function () {
+                var result = "Async operation completed.";
+                callback(result);
+            }, 2000); 
+        }
+
+        function handleResult(result) {
+            console.log("Handling result:", result);
+        }
+        simulateAsyncOperation(handleResult);
+
+    </script>
+</body>
+
+</html>
